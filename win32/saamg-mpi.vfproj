@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="typeStaticLibrary" ProjectCreator="Intel Fortran" Keyword="Static Library" Version="8.10" ProjectIdGuid="{026ED735-BC22-4485-9F7E-64B198D3D6A5}">
+	<Platforms>
+		<Platform Name="Win32"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TypeLibraryName="$(IntDir)/$(InputName).tlb"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFFortranCompilerTool" SwitchesHaveChanged="true" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" Preprocess="preprocessYes" PreprocessorDefinitions="ZERO_ORIGIN=1" ModulePath="$(INTDIR)/" ObjectFile="$(INTDIR)/" Traceback="true" BoundsCheck="true" RuntimeLibrary="rtSingleThreadedDebug" DisableDefaultLibSearch="true" CompileOnly="true"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFResourceCompilerTool" ResourceOutputFileName="$(IntDir)/$(InputName).res"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFLibrarianTool" MustRebuild="true" OutputFile="$(OUTDIR)/../../lib/saamg.lib" SuppressStartupBanner="true" AdditionalDependencies="LIBIFCOREMT.LIB LIBMMT.LIB IFCONSOL.LIB"/></Configuration>
+		<Configuration Name="Release|Win32" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TypeLibraryName="$(IntDir)/$(InputName).tlb"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" Optimization="optimizeFull" Preprocess="preprocessYes" PreprocessorDefinitions="ZERO_ORIGIN=1" ModulePath="$(INTDIR)/" ObjectFile="$(INTDIR)/" DisableDefaultLibSearch="true" CompileOnly="true"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFResourceCompilerTool" ResourceOutputFileName="$(IntDir)/$(InputName).res"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFLibrarianTool" OutputFile="$(OUTDIR)/../../lib/saamg-mpi.lib" SuppressStartupBanner="true" AdditionalDependencies="LIBIFCOREMT.LIB LIBMMT.LIB IFCONSOL.LIB "/></Configuration>
+		<Configuration Name="MPI|Win32" OutputDirectory="Release" IntermediateDirectory="Release" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TypeLibraryName="$(IntDir)/$(InputName).tlb"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" Optimization="optimizeFull" Preprocess="preprocessYes" PreprocessorDefinitions="ZERO_ORIGIN=1" ModulePath="$(INTDIR)/" ObjectFile="$(INTDIR)/" DisableDefaultLibSearch="true" CompileOnly="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFLibrarianTool" OutputFile="$(OUTDIR)/../../lib/saamg-mpi.lib" SuppressStartupBanner="true" AdditionalDependencies="LIBIFCOREMT.LIB LIBMMT.LIB IFCONSOL.LIB "/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFResourceCompilerTool" ResourceOutputFileName="$(IntDir)/$(InputName).res"/></Configuration>
+		<Configuration Name="MPI-with-fortran|Win32" ConfigurationType="typeStaticLibrary">
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TypeLibraryName="$(IntDir)/$(InputName).tlb"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" Optimization="optimizeFull" Preprocess="preprocessYes" PreprocessorDefinitions="ZERO_ORIGIN=1" ModulePath="$(INTDIR)/" ObjectFile="$(INTDIR)/" DisableDefaultLibSearch="true" CompileOnly="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFLibrarianTool" OutputFile="$(OUTDIR)/../../lib/saamg-mpi.lib" SuppressStartupBanner="true" AdditionalDependencies="LIBIFCOREMT.LIB LIBMMT.LIB IFCONSOL.LIB "/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFResourceCompilerTool" ResourceOutputFileName="$(IntDir)/$(InputName).res"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<File RelativePath=".\..\src\fortran\amg\lis_m_aggregate.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_count_time_mod.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_data_creation_AMGCG.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_data_type_AMGCG.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_finit.f90">
+			<FileConfiguration Name="MPI|Win32">
+				<Tool Name="VFFortranCompilerTool"/></FileConfiguration>
+			<FileConfiguration Name="MPI-with-fortran|Win32">
+				<Tool Name="VFFortranCompilerTool"/></FileConfiguration>
+			<FileConfiguration Name="Release|Win32">
+				<Tool Name="VFFortranCompilerTool"/></FileConfiguration></File>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_hash.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_queue.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_solver_AMGCG.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_solver_Gnum.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_solver_SR2.f90"/>
+		<File RelativePath=".\..\src\fortran\amg\lis_m_sort.f90"/></Filter></Files>
+	<Globals/></VisualStudioProject>

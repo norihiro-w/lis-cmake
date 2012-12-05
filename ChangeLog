@@ -1,0 +1,496 @@
+Lis 1.2.71  June 29, 2012
+
+  - Updated documents.
+
+Lis 1.2.70  June 28, 2012
+
+  - Updated documents.
+  - Updated spmvtest*.c. 
+
+Lis 1.2.69  June 28, 2012
+
+  - Updated documents.
+
+Lis 1.2.68  June 26, 2012
+
+  - Fixed bug in spmvtest1.c.
+
+Lis 1.2.67  June 26, 2012
+
+  - Updated documents.
+  - Updated print format. 
+
+Lis 1.2.66  June 19, 2012
+
+  - Updated documents.
+
+Lis 1.2.65  June 6, 2012
+
+  - Updated documents.
+
+Lis 1.2.64  May 1, 2012
+
+  - Added support for lis_matrix_malloc_*() in Fortran 
+    (thanks to Hector Espinoza).
+
+Lis 1.2.63  May 1, 2012
+
+  - Fixed bug of lisf_vector.c to support lis_vector_nrmi() in Fortran 
+    (thanks to Hector Espinoza).
+
+Lis 1.2.62  December 24, 2011
+
+  - Added support for preconditioning in MINRES.
+  - Fixed error handling bug in lis_solve().
+  - Updated documents.
+
+Lis 1.2.61  November 30, 2011
+
+  - Added support for lis_matrix_is_assembled() in lis_matrix_setDLU_*().
+
+Lis 1.2.60  November 30, 2011
+
+  - Fixed bug of lis_matrix_set_ccs() since 1.2.56, which caused segmentation fault. 
+
+Lis 1.2.59  November 25, 2011
+
+  - Updated documents.
+
+Lis 1.2.58  November 22, 2011
+
+  - Updated documents.
+
+Lis 1.2.57  November 9, 2011
+
+  - Added support for flag --with-library-suffix to tag suffix to library names
+    (thanks to Jussi Lehtola).
+
+Lis 1.2.56  November 8, 2011
+
+  - Added support for lis_matrix_is_assembled() in lis_matrix_set_*() for calling 
+    solver multiple times without allocating new memory (thanks to Malte Thoma).
+  - Changed origin of Fortran subroutine lis_vector_set_size() to 1 (thanks to Kengo Tomida).
+
+Lis 1.2.55  November 7, 2011
+
+  - Changed names of configuration header files config.h and config_win32.h 
+    to lis_config.h and lis_config_win32.h to avoid conflict in Fedora packages
+    (thanks to Jussi Lehtola).
+
+Lis 1.2.54  November 2, 2011
+
+  - Fixed bug of lis_solver_set_option() (thanks to Akio Yamamoto and Kenichiro Yoshimi). 
+
+Lis 1.2.53  November 29, 2010
+
+  - Added support for Intel Composer XE and Microsoft Visual Studio 2010. 
+
+Lis 1.2.52  October 20, 2010
+
+  - Fixed bug of lis_solver_minres() with flag -print (thanks to Kazuhiro Ando). 
+
+Lis 1.2.51  September 16, 2010
+
+  - Updated documents.
+
+Lis 1.2.50  September 15, 2010
+
+  - Updated documents.
+
+Lis 1.2.49  September 14, 2010
+
+  - Updated documents.
+
+Lis 1.2.48  September 12, 2010
+
+  - Fixed bug in lis_input_hb.c, which caused input error with symmetric matrices
+    in Harwell-Boeing Format (thanks to Shoji Itoh). 
+
+Lis 1.2.47  September 10, 2010
+
+  - Added instruction for building shared libraries to documents.
+
+Lis 1.2.46  September 8, 2010
+
+  - Fixed bug of OMPFLAG. 
+
+Lis 1.2.45  September 7, 2010
+
+  - Updated documents (thanks to Riccardo Rossi). 
+
+Lis 1.2.44  August 26, 2010
+
+  - Updated configure.in. 
+
+Lis 1.2.43  August 25, 2010
+
+  - Set default configuration of Mac OS X binaries to 64-bit. 
+  - Fixed bug in configure.in for PGI compilers. 
+  - Added support for Pathscale compilers (experimental).
+
+Lis 1.2.42  August 20, 2010
+
+  - Enabled AC_CHECK_HEADERS for Mac OS X.
+  - Fixed parameters of configure.in for Mac OS X.
+    (Note that default installation of Open MPI for Mac OS does not support Fortran.)
+
+Lis 1.2.41  August 18, 2010
+
+  - Added support for Windows and Mac OS X. 
+  - Added instructions for Visual Studio to documents (thanks to Lizhu Tong).
+  - Fixed default location of win32 executable files.
+
+Lis 1.2.40  August 17, 2010
+
+  - Fixed bug in lis_with_fortran_mpi.icproj. 
+  - Restored flag USE_SAAMG in project files. 
+
+Lis 1.2.39  August 14, 2010
+
+  - Fixed default location of win32 libraries. 
+
+Lis 1.2.38  August 13, 2010
+
+  - Fixed character encoding of project files. 
+  - Fixed obsolete library name of MPICH2 in project files.
+
+Lis 1.2.37  August 12, 2010
+
+  - Moved project files to win32. 
+
+Lis 1.2.36  August 11, 2010
+
+  - Fixed bug in configure.in, which caused configure error with XL Fortran. 
+  - Fixed bug in src/fortran/lisf_system.c, which caused compile error with 
+    Visual Studio. 
+  - Temporarily removed flag USE_SAAMG in project files for Visual Studio. 
+
+Lis 1.2.35  July 29, 2010
+
+  - Fixed bug in test/test.sh, which caused make check error with flag --enable-quad.
+  - Updated documents.
+
+Lis 1.2.34  July 28, 2010
+
+  - Updated documents.
+
+Lis 1.2.33  July 23, 2010
+
+  - Fixed bug in spmvtests. 
+  - Updated documents.
+
+Lis 1.2.32  July 23, 2010
+
+  - Added experimental support for flags -(e)storage and -(e)storage_block.
+  - Updated spmvtests and documents.
+  - Changed specification of precision flag:
+
+     flags       | description              flags | description
+    -------------+--------------------     -------+-----------------------------
+     -precision  | for lis_solve()     ==>  -f    | for lis_solve()
+     -eprecision | for lis_esolve()         -ef   | for lis_esolve()
+
+Lis 1.2.31  July 22, 2010
+
+  - Added support for Rayleigh Quotient Iteration. 
+  - Inner solvers for quad precision eigensolvers are switched to quad precision.  
+  - Changed order of eigensolvers:
+
+     flags      | eigensolvers              flags     | eigensolvers
+    ------------+--------------------     ------------+-----------------------------
+     -e {cg|4}  | Conjugate Gradient  ==>  -e {rqi|4} | Rayleigh Quotient Iteration
+     -e {li|5}  | Lanczos Iteration        -e {si|5}  | Subspace Iteration
+     -e {si|6}  | Subspace Iteration       -e {li|6}  | Lanczos Iteration
+     -e {cr|7}  | Conjugate Residual       -e {cg|7}  | Conjugate Gradient
+                                           -e {cr|8}  | Conjugate Residual
+
+  - Updated documents. 
+
+Lis 1.2.30  July 21, 2010
+
+  - Fixed bug of lis_esolve(), which failed to destroy esolver in some cases
+    with flag --enable-mpi. 
+
+Lis 1.2.29  July 21, 2010
+
+  - Fixed bug of lis_esolve() in 1.2.27 and 1.2.28, which failed to return 
+    default eigenvector.
+  - Fixed bug of configure for flag --enable-gprof with f90 compilers.
+  - Added support for flag --enable-64bit for AIX and Solaris x86. 
+  - Updated documents. 
+
+Lis 1.2.28  July 16, 2010
+
+  - Updated documents. 
+
+Lis 1.2.27  July 15, 2010
+
+  - Added support for quadruple precision operations in eigensolvers. 
+  - Fixed bug in lis.vcproj.
+
+Lis 1.2.26  July 7, 2010
+
+  - Added support for lis_vector_nrmi() for computing infinity norm 
+    (thanks to Osamu Nakamura).
+  - Updated documents.
+
+Lis 1.2.25  July 4, 2010
+
+  - Fixed bug in configure.in for gcc with --enable-gprof. 
+
+Lis 1.2.24  July 3, 2010
+
+  - Added support for flag --enable-gprof for performance analysis 
+    with gprof (experimental).
+  - Added test program for lis_esolver_get_evectors(). 
+  - Updated documents.
+
+Lis 1.2.23  July 1, 2010
+
+  - Added support for lis_output_matrix() (thanks to Jun Sato). 
+  - Changed specification of lis_esolver_get_evectors().
+
+Lis 1.2.22  June 30, 2010
+
+  - Fixed bug in test.sh.
+  - Updated spmvtests.
+  - Updated documents.
+
+Lis 1.2.21  June 29, 2010
+
+  - Updated test programs. 
+  - Updated documents.
+
+Lis 1.2.20  June 28, 2010
+
+  - Added support for parameter irestart for IDR(s). 
+  - Fixed default value of parameter emaxiter for subspace and
+    Lanczos iteration.
+  - Updated documents.
+
+Lis 1.2.19  June 26, 2010
+
+  - Fixed default value of parameter etol to avoid breakdown. 
+
+Lis 1.2.18  June 24, 2010
+
+  - Fixed minor bug in test.sh for SAAMG with flag --enable-omp.
+  - Fixed minor bug in lis_solver.c for SAAMG with flag --enable-mpi.	
+  - Added support for three dimensional test programs. 
+  - Updated documents.
+
+Lis 1.2.17  June 21, 2010
+
+  - Fixed print bug in lis_esolver_cg.c.
+
+Lis 1.2.16  June 18, 2010
+
+  - Bug fix release. Some Fortran related interoperability problems still exist.
+  - Fixed some errors in documents (thanks to Osamu Nakamura).
+  - Added support for lis_output() in Fortran (thanks to Hiroshi Imamura).
+  - Updated spmvtests (thanks to Katsunori Matsuzaki).
+  - Fixed errors in number of nonzero entries printed by test programs 
+    test2, etest2, spmvtest1 and spmvtest2 with flag --enable-mpi. 
+  - Fixed bug in spmvtests, which sometimes fail to measure elapsed time 
+    when matrix is very small. 
+  - Fixed bug in spmvtests for single threaded environments. 
+  - Added support for flag -m to specify default mode 
+    for Lanczos and subspace iteration.
+  - Updated documents. 
+
+Lis 1.2.15  September 8, 2009
+
+  - Separated core kernel of lis_solve() to avoid overhead of handling
+    preconditioner when called multiple times. It is now implemented 
+    as lis_solve_kernel(), to be combined with lis_precon_create() and 
+    lis_precon_destroy() (thanks to Masakazu Akiyama). 
+  - Inverse iteration and subspace iteration were rewritten using 
+    lis_solve_kernel(). Performance of Lanczos iteration, which calls 
+    inverse iteration to compute eigenvectors, is also affected. 
+  - Updated test programs to measure SpMV performance.
+
+Lis 1.2.14  August 26, 2009
+
+  - Fixed bug in configure.in, which omitted OMPFLAG when target architecture 
+    is specified with flag --enable-mpi.
+  - Updated test programs to measure SpMV performance.
+  - Fixed description of test program etest3 in documents.
+	
+Lis 1.2.13  August 15, 2009
+
+  - Fixed specification of lis_matrix_split() to keep original data of 
+    splitted matrix (thanks to Tim Cramer).
+
+Lis 1.2.12  July 21, 2009
+
+  - Fixed minor bugs related to SpMV test programs.
+  - Revised documents.
+
+Lis 1.2.11  July 7, 2009
+
+  - Fixed specification of lis_vector_gather() to share vector values 
+    among processes (thanks to Kouji Takatani). 
+  - Revised documents.
+
+Lis 1.2.10  July 4, 2009
+
+  - Added support for lis_vector_scatter() and lis_vector_gather() to handle
+    vector elements, mainly for MPI configuration. 
+  - Added official support for lis_solver_get_status() and 
+    lis_esolver_get_status() to get correct status of solvers 
+    (thanks to Tim Cramer). 
+  - Fixed bug of link error for Fortran 77 based MPI compilers.
+  - Revised documents.
+	
+Lis 1.2.9  July 1, 2009
+
+  - Added official support for flag -saamg_theta to set drop criteria for AMG. 
+  - Fixed default parameter of theta for nonsymmetric AMG, which caused error 
+    with Lis 1.2.6 or higher (thanks to Kouji Takatani). 
+  - Added test programs to measure SpMV performance (experimental). 
+  - Fixed MPILIBS related bug in configure.in. 
+  - Fixed some minor bugs.
+  - Revised documents.
+
+Lis 1.2.8  June 3, 2009
+
+  - Fixed minor bug in configure script.
+
+Lis 1.2.7  June 1, 2009
+
+  - Fixed bug in MPI configuration, which caused error on Hitachi SR16000 
+    and IBM p575. 
+  - Fixed some minor bugs. 	
+
+Lis 1.2.6  March 23, 2009
+
+  - Changed location of config*.h, to be installed in $(includedir).
+  - Fixed some minor bugs. 
+
+Lis 1.2.5  December 14, 2008
+
+  - Added full functions for handling elements of vectors and matrices via
+    Fortran interface. 
+  - Added support for matrix storage format conversion in eigensolvers.
+  - Added support for PGI and Hitachi compilers. 
+  - Fixed bug in configure, which omitted flag -DUSE_MPI of Fortran based 
+    MPI compilers.
+  - Fixed bug in test/test3f.F, which caused make check error with -DUSE_MPI.
+
+Lis 1.2.4  December 5, 2008
+
+  - Added support for conjugate residual method for nonsymmetric eigenproblems
+    (experimental).
+  - Fixed some minor bugs.
+
+Lis 1.2.3  December 4, 2008
+
+  - Fixed origin of lis_vector_get_value() in Fortran (thanks to Kengo Tomida).
+  - Fixed some minor bugs.
+
+Lis 1.2.2  November 25, 2008
+
+  - Fixed bug in test/test2.c, which caused make check error in some cases
+    (thanks to Takahito Miki). 
+  - Fixed bug in configure for combination of SAAMG and gfortran based 
+    MPI compiler. SAAMG can be built with gfortran 4.3 or higher. 
+  - Fixed some minor bugs.	
+
+Lis 1.2.1  November 18, 2008
+
+  - Fixed origin of lis_vector_set_value() in Fortran (thanks to Yutaka Masuda).
+
+Lis 1.2.0  November 12, 2008
+
+  - Added support for eigensolvers (power iteration, inverse iteration, 
+    approximate inverse iteration, conjugate gradient, Lanczos iteration, 
+    and subspace iteration) for real sparse matrices.
+  - Added support for MINRES (thanks to Hirofumi Notsu). 
+  - Changed names of 
+    lis_output_residual_history() and lis_get_residual_history()
+    to
+    lis_solver_output_rhistory() and lis_solver_get_rhistory(), 
+    respectively. 
+  - Fixed convergence criteria of TFQMR and BiCGSTAB(l) (thanks to Shoji Itoh).
+  - Added support for NEC SX-9. 
+  - Updated config.guess and config.sub. 
+  - Added some optimization options for Fujitsu Compiler (thanks to Fujitsu 
+    Limited). 
+  - Fixed location of include statement in lisf_init.F to avoid compiling 
+    error with Fujitsu Compiler. 
+  - Fixed configure to choose mpiexec if mpirun is not available. 
+  - Fixed configure to choose Fortran 9x based MPI compiler if SAAMG is 
+    enabled. 
+  - Fixed some minor bugs.
+  - Revised documents.
+
+Lis 1.1.2  December 24, 2007
+
+  - Added support for IDR(s) method.
+  - Fixed some minor bugs.
+
+Lis 1.1.1  December 6, 2007
+
+  - Changed specification of lis_initialize() to avoid MPICH1 related error
+    (thanks to Takashi Yoshida). 
+  - Fixed some minor bugs.
+
+Lis 1.1.0  October 31, 2007
+
+  - Added support for CR,BiCR,CRS,BiCRSTAB,GPBiCR,BiCRSafe and FGMRES methods.
+  - Added support for ILUT preconditioner.
+  - Added binary package for Microsoft Windows.
+  - Added Lis-test for Windows.
+  - Fixed some minor bugs. 
+
+Lis 1.1.0 beta2  June 18, 2007
+
+  - Added support for BiCGSafe.
+  - Fixed bug caused by some memory leaks.
+
+Lis 1.1.0 beta1  November 7, 2006
+
+  - Added support for quadruple precision operations in linear equation 
+    solvers.
+  - Added support for Fortran user interface.
+  - Added support for nonsymmetric SAAMG preconditioner (symmetric structure
+    only).
+  - Added support for Crout ILU preconditioner.
+  - Added support for additive Schwarz preconditioner.
+  - Added support for user-defined preconditioners.
+  - Added support for Harwell-Boeing format. 
+  - Integrated Lis-AMG into Lis.
+  - Introduced autoconf.   
+  - Changed some specifications:
+       - Introduced LIS_SOLVER structure (integrated type parameters).
+       - Changed declaration of matrices (thanks to David Moloney) and vectors.
+       - Changed notation of command line options.
+
+Lis 1.0.2  April 17, 2006
+
+  - Fixed bug caused by not correctly setting value of beginning and end 
+    of line when lis_vector_create() is called.
+  - Fixed bug caused by wrong selection of linear equation solvers specified 
+    with lis_set_options():
+
+     flags          | solvers             flags          | solvers
+    ----------------+---------------     ----------------+---------------
+     -i {tfqmr|7}   | Orthomin       ==>  -i {tfqmr|7}   | TFQMR          
+     -i {orthomin|8}| GMRES               -i {orthomin|8}| Orthomin       
+     -i {gmres|9}   | TFQMR               -i {gmres|9}   | GMRES          
+  
+  - Fixed bug in allocation of temporary array of Orthomin method.
+  - Fixed bug in output of residual norm in TFQMR method.
+  - Fixed bug in array assignment of BiCG method with ILU preconditioner. 
+  - Fixed some minor bugs. 
+
+Lis 1.0.1  November 6, 2005
+
+  - Added support for Lis-AMG.
+  - Added English manual. 
+  - Added test program test1b. 
+  - Fixed some minor bugs. 
+
+Lis 1.0.0  September 20, 2005
+
+  - Released first version. 
