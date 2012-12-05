@@ -1,4 +1,4 @@
-Lis library with CMake                                                      {#mainpage}
+Lis-CMake
 ============
 
 [Lis][lis], a Library of Iterative Solvers for linear systems, is a scalable parallel library for solving linear equations and standard eigenvalue problems with real sparse matrices using iterative methods. 
