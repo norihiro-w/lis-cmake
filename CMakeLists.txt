@@ -1,10 +1,11 @@
 # Lis: a Library of Iterative Solvers for Linear Systems (http://www.ssisc.org/lis/)
 
 cmake_minimum_required(VERSION 2.8.7)
-project( Lis C Fortran)
+project( Lis C)
+#project( Lis C Fortran)
 
-INCLUDE(CMakeFortranInformation)
-INCLUDE(FortranCInterface)
+#INCLUDE(CMakeFortranInformation)
+#INCLUDE(FortranCInterface)
 INCLUDE(cmake/CheckTypeSizes.cmake)
 INCLUDE(cmake/FindIncludeHeader.cmake)
 
@@ -13,8 +14,8 @@ INCLUDE(cmake/FindIncludeHeader.cmake)
 
 OPTION(LIS_ENABLE_OPENMP "Use OpenMP" OFF)
 OPTION(LIS_ENABLE_MPI "Use MPI" OFF)
-OPTION(LIS_ENABLE_FORTRAN "build Fortran 77 interfaces" OFF)
-OPTION(LIS_ENABLE_SAAMG "build SA-AMG preconditioner" OFF)
+#OPTION(LIS_ENABLE_FORTRAN "build Fortran 77 interfaces" OFF)
+#OPTION(LIS_ENABLE_SAAMG "build SA-AMG preconditioner" OFF)
 OPTION(LIS_ENABLE_QUAD "enable quadruple precision operations" OFF)
 OPTION(LIS_ENABLE_SSE2 "use Intel Streaming SIMD Extensions" ON)
 OPTION(LIS_BUILD_TEST "Build tests" OFF)
